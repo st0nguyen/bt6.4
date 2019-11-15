@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="text" value="" ">: nhập tên ngôi sao</input>
+    <button onclick="document.write(check())">Có chòm sao là</button>
+    <script>
+        let arr1=[ 'Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe' ,'Regulus'];
+        let arr2=[ 'Ursa Minor', 'Tarurus',' Cygnus', 'Lyra', 'Aquila', 'Ursa Major' ,'Leo'];
+        function check(){
+            let n= document.getElementById('text').value;
+            let flag=true;
+            for (let i=0;i<arr1.length;i++){
+                if (n==arr1[i]){
+                n=arr2[i];
+                break;
+                }else
+                flag=false;
+            }
+            if (flag==true)
+            return n;
+            else 
+            return 'không tìm thấy';
+        }
+
+    </script>
+</body>
+</html>
